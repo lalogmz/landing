@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Rubik+Mono+One&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Colores*/
+:root{
+    --color__principal: rgb(0, 113, 212);
+    --color__secundario: rgb(73, 211, 242);
+    --color__terciario: rgb(104, 102, 102);
+/*colores básicos*/
+--color__blanco: white;
+--color__negro: black;
+}
+
+nav{
+    background: var(--color__secundario);
+    height: 60px;
+    width: 70%;
+}
+
+label .logo{
+    color: var(--color__principal);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 7px;
+}
+
+nav ul li a{
+    color: var(--color__terciario);
+    font-size: 17px;
+}
+
+a:hover{
+    background-color: var(--color__principal);
+    transition: .5s;
+    
+}
+
