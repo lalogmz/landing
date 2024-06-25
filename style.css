@@ -43,7 +43,6 @@ label.Logo{
 nav ul{
     float: right;
     margin-right: 20px;
-    
 }
 nav ul li{
     display: inline-block;
@@ -79,9 +78,9 @@ a:hover{
     display: none;
 }
 
-@media  (max-width:952px){
+@media  (max-width:720px){
     label.logo{
-        font-size: 10px;
+        font-size: 25px;
         padding-left: 50px;
     }
     nav ul li a {
@@ -89,22 +88,38 @@ a:hover{
     }
 }
 
-@media (max-width: 858px){
+@media (max-width: 720px){
     .checkbtn{
         display: block;
     }
+    /*agregue el nav*/
 
-    ul{
+   nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
         background: var(--color__blanco);
         top: 80px;
-        left: 100%;
+        left: -100%;
         text-align: center;
         transition: all .5s;
         z-index: 1;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
 
+    }
+    nav ul li{
+         font-size: 19px;
+    }
+
+    a:hover{
+        background: var(--color__primario);
+    }
+    #check:checked ~ul{
+        left: 0%;
     }
 }
 
@@ -115,7 +130,7 @@ a:hover{
 .hero{
     background:linear-gradient(to bottom,rgba(199, 195, 195, 0.285),rgba(208, 206, 206, 0.774)), url("https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
-    height: 50vh; 
+    height: 50vh;
     text-align: center;
     border-bottom: 5px solid #1C6EA4;
     border-radius: 0px 0px 90px 31px;
@@ -128,8 +143,8 @@ h2{
     top: 30%;
     left: 50%;
     transform: translateX(-50%)translateY(-50%);
-
 }
+
 h3{
     color: var(--color__blanco);
     font-size: 25px;
@@ -138,16 +153,51 @@ h3{
     left: 50%;
     transform: translateX(-50%)translateY(-50%);
 }
+
+/* Contenido principal */
+
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contenido__principal{
+    width: 80%;
+    margin: 3% auto;
+}
+.contenido__principal img{
+    max-width: 100%;
+    border-radius: 10px;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.texto__caja{
+    color: var(--color__negro);
+    font-size: 19px;
+    justify-content: center;
+}
+@media (max-width:720px){
+    .contenido__principal{
+    font-size: 19px;
+    justify-content: center;
+}
+}
+.texto__caja h3 {
+    font-size: 19px;
+    color: var(--color__negro);
+}
 .flex__container{
     background-color: rgb(118, 186, 255);
     border: 5px solid rgb(10, 140, 180);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70%;
-    margin: 0% auto;
+    width: 80%;
+    margin: 5% auto;
     justify-content: center;
     padding: 10px;
+    border-radius: 10px;
     
 
  }
@@ -164,10 +214,6 @@ h3{
      border: solid rgb(239, 239, 239) 5px;
      color: var(--color__blanco);
      font-size: 35px;
-     font-family: "Pacifico", cursive;
-     font-weight: 400;
-     font-style: normal;
- 
  }
  
  .box__02{
@@ -207,6 +253,46 @@ h3{
      color: rgb(247, 247, 247);
      size: 15px;
  }
+ /* tarjeta */
+ .contendor__tarjeta{
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+ }
+.tarjeta{
+    width: 325px;
+    background-color:var(--color__principal);
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0,0.3);
+    overflow: hidden;
+}
+.tarjeta img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.contenido__tarjeta{
+    padding: 20px;
+}
+.contenido__tarjeta p{
+    font-size: 20px;
+    color: var(--color__terciario);
+}
+
+.boton__tarjeta{
+    display: inline-block;
+    background-color: var(--color__blanco);
+    color: var(--color__secundario);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+ /* termina tarjeta */
 
  /* footer */
 
@@ -214,10 +300,13 @@ h3{
     background:var(--color__secundario);
     padding: 30px 0;
     text-align: center;
+    margin-top: 20px;
  }
  .footer a{
     font-size: 17px;
     color: var(--color__blanco);
+    text-decoration: none;
+    list-style: none;
  }
  .footer .contenido__footer {
     width: 100%;
@@ -229,9 +318,10 @@ h3{
     width: 100%;
  }
 
- .footer .contenido__footer li {
+ .footer .contenido__footer ul li {
     display: inline-block;
     margin: 0 15px;
+    text-align: left;
  }
  .footer .contenido__footer a i{
     font-size: 25px;
@@ -252,5 +342,3 @@ h3{
     }
     
  }
-
- 
